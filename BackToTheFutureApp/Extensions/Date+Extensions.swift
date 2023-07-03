@@ -9,8 +9,8 @@ extension Date {
     }
     
     func formattedDate() -> String {
-        
-        // TODO
-        return ""
+        let date = Date()
+        let formatted = date.formatted(date: .numeric, time: .omitted)
+        return formatted
     }
 }
