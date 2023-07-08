@@ -3,14 +3,12 @@ import Foundation
 extension Date {
     
     func dateAfter(years: Int) -> Date? {
-     
-        // TODO
-        return nil
+        Calendar.current.date(byAdding: .year, value: years, to: self)
     }
     
     func formattedDate() -> String {
-        
-        // TODO
-        return ""
+        let formatted = DateFormatter()
+        formatted.dateFormat = "dd/MM/yyyy"
+        return formatted.string(from: self)
     }
 }
